@@ -21,16 +21,18 @@ var iterateFunctionally = function (array) {
   array.forEach(updateAndDisplay);
 };
 
-var iterateWithWhileLoop = function (array) {
+var iterateWithWhileLoop = function (ballpit) {
   var index = 0;
   while (index < array.length) {
-    updateAndDisplay(array[index]);
-    ++index;
+    ballpit[index].update();
+    ballpit[index].display();
+    ++index; //index +=1; index = index + 1;
   }
 };
 
-var iterateWithForLoop = function (array) {
+var iterateWithForLoop = function (ballpit) {
   for (var i = 0; i < array.length; ++i) {
-    updateAndDisplay(array[i]);
+    ballpit[i].update();
+    ballpit[i].display();
   }
 };
